@@ -1,0 +1,4 @@
+export const USER_LOGIN = "USER_LOGIN";
+export const INFOMATION = "INFOMATION";
+export const ACCESS_TOKEN = "ACCESS_TOKEN";
+export const INFOMATIONUSERREDUCER = "INFOMATION_USER";

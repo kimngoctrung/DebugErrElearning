@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "font-Roboto";
+  src: url("../assets/Roboto/Roboto-Regular.ttf");
+}
+* {
+  font-family: "font-Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 21px;
+  letter-spacing: -0.015em;
+}
+#textTitleInput {
+  font-weight: bold !important;
+  th {
+    font-weight: bold !important;
+  }
+  span {
+    font-weight: bold !important;
+  }
+  p {
+    font-weight: bold !important;
+  }
+}
+.textTitleInput {
+  th {
+    font-weight: bold !important;
+    color: #7734eb !important;
+  }
+  font-weight: bold !important;
+  color: #7734eb !important;
+}

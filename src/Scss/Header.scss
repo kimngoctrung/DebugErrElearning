@@ -1,0 +1,196 @@
+.navOfMe {
+  .ulOfMe {
+    li {
+      @media screen and (max-width: 786px) {
+        margin-left: 20px !important;
+        margin-right: 20px;
+      }
+      margin-left: 30px;
+      margin-right: 40px;
+    }
+    .marGinSignUp {
+      @media screen and (min-width: 769px) {
+        margin-left: 23rem !important;
+      }
+      @media screen and (min-width: 1281px) {
+        margin-left: 38rem !important;
+      }
+      // @media screen and (min-width: 1280px) {
+      //   margin-left: 23rem !important;
+      // }
+    }
+  }
+}
+.maginOfMe {
+  h1 {
+    color: #ff9f43;
+  }
+  h3 {
+    font-size: 25px;
+    padding: 15px 50px;
+    border: none;
+    color: #ec7532;
+  }
+}
+.myButtonSignUp {
+  position: relative;
+  display: inline-block;
+  color: #03e9f4 !important;
+  font-size: 20px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: 0.2s;
+  @media screen and (max-width: 767px) {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  &:hover {
+    background: #03e9f4;
+    color: #050801 !important;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 30px #03e9f4;
+    transition-delay: 1s;
+    text-decoration: none;
+  }
+
+  span {
+    position: absolute;
+    display: block;
+
+    &:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #03e9f4);
+    }
+  }
+
+  &:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+
+  span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+  }
+
+  &:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+
+  span:nth-child(2) {
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+  }
+
+  &:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  span:nth-child(4) {
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+  }
+
+  &:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }
+}
+.myButtonSignUpActive {
+  background: #03e9f4;
+  color: #050801 !important;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 30px #03e9f4;
+}
+.myButtonSignIn {
+  color: #cefc03 !important;
+  transition: 2s;
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+  }
+  &:hover {
+    background: #cefc03;
+    color: lightcyan !important;
+    box-shadow: 0 0 5px #cefc03, 0 0 25px #cefc03, 0 0 30px #cefc03;
+    text-decoration: none;
+  }
+}
+.myButtonCheckOut {
+  padding: 5px 10px;
+  color: #673ab7 !important;
+  transition: 2s;
+  position: absolute;
+  right: 3%;
+  padding: 10px 20px;
+  @media screen and (max-width: 1280px) {
+    padding: 10px 20px !important;
+    margin: 0 !important;
+    position: inherit;
+  }
+  @media screen and (max-width: 768px) {
+    position: inherit;
+    padding: 0;
+    margin: 0;
+  }
+  @media screen and (max-width: 411px) {
+    position: inherit;
+    padding: 0;
+    margin-top: 5px;
+  }
+  &:hover {
+    background: #673ab7;
+    color: lightcyan !important;
+    box-shadow: 0 0 5px #673ab7, 0 0 25px #673ab7, 0 0 30px #673ab7;
+    text-decoration: none;
+  }
+}
+
+.myClassActive {
+  background: #cefc03;
+  color: black !important;
+  box-shadow: 0 0 5px #cefc03, 0 0 25px #cefc03, 0 0 30px #cefc03;
+}
+.userLogin {
+  @media screen and (max-width: 411px) {
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
+    position: inherit;
+    // width: 50%;
+    margin-left: 20px !important;
+  }
+  @media screen and (max-width: 768px) {
+    position: inherit;
+  }
+  @media screen and (max-width: 1280px) {
+    padding: 0 !important;
+    margin: 0 !important;
+    position: inherit;
+  }
+  position: absolute;
+  right: 10%;
+  // background: #03e9f4;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 30px #03e9f4;
+  color: white !important;
+  border: 2px solid #03e9f4;
+}

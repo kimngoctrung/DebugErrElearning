@@ -1,0 +1,279 @@
+.buttonForm {
+  padding: 15px 20px;
+  border-radius: 30px;
+  background: linear-gradient(to right, #92cbdf, #2596be);
+  border: none;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  margin-right: 20px;
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: #2596be;
+    position: absolute;
+    top: 0%;
+    transform: skewX(30deg);
+    transition: all 0.5s;
+  }
+  &:active {
+    background-color: #2596be;
+    &::after {
+      opacity: 0.32;
+    }
+  }
+  &:hover::after {
+    width: 120%;
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
+}
+.buttonFix {
+  @extend .buttonForm;
+  &::after {
+    left: -15%;
+  }
+  @media screen and (max-width: 541px) {
+    margin-bottom: 20px;
+  }
+}
+.buttonUpdate {
+  @extend .buttonForm;
+  background: linear-gradient(to left, #e133ff, #7b33ff);
+  color: white;
+  &::after {
+    right: -15%;
+    background-color: #7b33ff;
+  }
+}
+.buttonSreachUser {
+  @media screen and (max-width: 411px) {
+    padding: 5px 10px;
+  }
+  border: 1px solid #ff7b33;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ff7b33;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+
+  &:hover {
+    color: white;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #ff7b33;
+    z-index: -1;
+    transition: 0.8s;
+    bottom: 0;
+    border-radius: 50px 50px 0 0;
+  }
+
+  &:hover::before {
+    height: 180%;
+  }
+}
+.additionCourse {
+  @media screen and (max-width: 411px) {
+    padding: 0;
+  }
+  @extend .buttonSreachUser;
+  border: 1px solid #ff33b7;
+  color: #ff33b7;
+  &::before {
+    background: #ff33b7;
+  }
+}
+.deleteCourse {
+  @extend .buttonSreachUser;
+  border: 1px solid #ff3351;
+  color: #ff3351;
+  &::before {
+    background: #ff3351;
+  }
+}
+.buttonTooLong {
+  @media screen and (max-width: 768px) {
+    margin-right: 2px !important;
+  }
+  position: relative;
+  height: 60px;
+  width: 200px;
+  border: none;
+  outline: none;
+  color: white;
+  background: #2c2815;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    filter: blur(5px);
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    background-size: 400%;
+    transition: opacity 0.3s ease-in-out;
+    animation: animate 20s linear infinite;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+
+    &:active {
+      background: none;
+
+      &:before {
+        filter: blur(2px);
+      }
+    }
+  }
+}
+.buttonTooLong2 {
+  @media screen and (max-width: 768px) {
+    margin-right: 2px !important;
+  }
+  @media screen and (max-width: 540px) {
+    margin-right: 100px !important;
+  }
+  @extend .buttonTooLong;
+  background: #412a6e;
+}
+.buttonTooLong3 {
+  @media screen and (max-width: 768px) {
+    margin-right: 2px !important;
+  }
+  @extend .buttonTooLong;
+  background: #2a2e6e;
+}
+.buttonDeleteUser {
+  @extend .buttonForm;
+  background: linear-gradient(to right, #fe686f, #ff000c);
+  color: white;
+  &::after {
+    left: -15%;
+    background-color: #ff000c;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+.buttonAddtionMem {
+  position: relative;
+  height: 60px;
+  width: 200px;
+  margin: 0 35px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #15ee83;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  @media screen and (max-width: 786px) {
+    margin: 0 !important;
+  }
+  @media screen and (max-width: 280px) {
+    margin: 0 !important;
+  }
+
+  cursor: pointer;
+  transition: background 0.5s;
+
+  &:first-child:hover {
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+  }
+
+  &:last-child:hover {
+    background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+    background-size: 400%;
+  }
+
+  &:first-child:before,
+  &:last-child:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &:first-child:hover:before,
+  &:last-child:hover:before {
+    opacity: 1;
+    z-index: -1;
+  }
+
+  &:hover {
+    z-index: 1;
+    animation: glow 8s linear infinite;
+    &:active {
+      border: none;
+      color: black;
+    }
+  }
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
